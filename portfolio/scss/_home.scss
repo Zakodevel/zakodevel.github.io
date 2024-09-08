@@ -1,0 +1,36 @@
+.home {
+	height: 100%;
+	padding-top: 40vh;
+	overflow: hidden;
+	align-items: center;
+	text-align: center;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+				rgba($primary-color, 0.9),
+				rgba($primary-color, 0.9)
+			),
+			url("../img/2024-09-06_02-10-00_9272.png") center top;
+		background-size: cover;
+		opacity: 0.5;
+		z-index: -1;
+	}
+
+	&__name {
+		font-size: 8rem;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+
+		&--last {
+			color: $secondary-color;
+			font-weight: 700;
+		}
+	}
+}
