@@ -1,4 +1,4 @@
-# Zakodevel´s Portfolio
+# Zakarias Portfolio
 
 Welcome to my portfolio! This will be an ongoing project, and i will try to update it as i learn. Below is a brief overview of the project.
 
