@@ -3,19 +3,19 @@ $secondary-color: #6a209b;
 $font-family: "montserrat", sans-serif;
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin transition-ease {
-	transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 @function set-text-color($color) {
-	@if lightness($color) > 40% {
-		@return #000;
-	} @else {
-		@return #fff;
-	}
+  @if lightness($color) > 40% {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
 }
