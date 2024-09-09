@@ -7,10 +7,9 @@
 
 body {
   background: $primary-color;
-  color: set-text-color($primary-color);
+  color: $font-color;
   height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1;
+  // line-height: 1;
   font-family: $font-family;
 }
 
@@ -21,7 +20,7 @@ h3 {
 }
 
 a {
-  color: set-text-color($primary-color);
+  color: $font-color;
   text-decoration: none;
 }
 
@@ -48,6 +47,9 @@ main {
     position: fixed;
     bottom: 1rem;
     left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     a {
       padding: 0.4rem;
