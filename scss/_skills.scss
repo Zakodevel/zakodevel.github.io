@@ -1,27 +1,27 @@
 .skills {
-	height: 100vh;
-	padding-top: 13rem;
-	overflow: hidden;
+  height: 100vh;
+  padding-top: 13rem;
+  overflow: hidden;
 
-	h2 {
-		font-size: 2rem;
-		font-weight: 700;
-		color: ($secondary-color);
-		margin-inline: 8rem;
-	}
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: ($secondary-color);
+    margin-inline: 8rem;
+  }
 
-	ul {
-		color: set-text-color($primary-color);
-		font-size: 1.5rem;
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-		margin-inline: 8rem;
-		font-weight: 600;
-		letter-spacing: -0.03rem;
-		line-height: 1.7;
+  ul {
+    color: set-text-color($primary-color);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-inline: 8rem;
+    font-weight: 600;
+    letter-spacing: -0.03rem;
+    line-height: 1.7;
 
-		li {
-			margin-bottom: 2rem;
-		}
-	}
+    li {
+      margin-bottom: 2rem;
+    }
+  }
 }
