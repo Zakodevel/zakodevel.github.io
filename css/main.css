@@ -25,13 +25,17 @@
   z-index: -1;
 }
 .home__name {
-  font-size: 8rem;
+  font-size: 6rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 .home__name--last {
   color: #6a209b;
   font-weight: 700;
+}
+.home h2 {
+  font-size: 2rem;
+  color: #fff;
 }
 
 .menu-btn {
@@ -278,14 +282,4 @@ main .social-icons a {
 }
 main .social-icons a:hover {
   color: #6a209b;
-}
-
-footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
-  color: #fff;
 }/*# sourceMappingURL=main.css.map */
