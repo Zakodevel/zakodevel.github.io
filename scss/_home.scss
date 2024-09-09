@@ -28,12 +28,6 @@
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 
-    @media (min-width: 768px) {
-      font-size: 0.1rem;
-      padding-bottom: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-
     &--last {
       color: $secondary-color;
       font-weight: 700;
@@ -43,9 +37,5 @@
   h2 {
     font-size: 2rem;
     color: set-text-color($primary-color);
-
-    @media (min-width: 768px) {
-      font-size: 0.1rem;
-    }
   }
 }
