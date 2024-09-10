@@ -16,7 +16,6 @@
 }
 .home h1,
 .home h2 {
-  width: 60%;
   line-height: 110%;
   letter-spacing: 0.4rem;
   margin-bottom: 2rem;
@@ -219,7 +218,6 @@
 }
 .about h2,
 .about p {
-  width: 60%;
   line-height: 110%;
   letter-spacing: 0.4rem;
   margin-bottom: 2rem;
@@ -361,7 +359,6 @@
 
 .mail-to {
   width: 60%;
-  font-size: 0.8rem;
   line-height: 110%;
   letter-spacing: 0.4rem;
   margin-bottom: 2rem;
@@ -370,14 +367,14 @@
   .mail-to {
     width: 80%;
     font-size: 1rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.4rem;
   }
 }
 @media (max-width: 480px) {
   .mail-to {
     width: 90%;
     font-size: 0.9rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.4rem;
   }
 }
 
