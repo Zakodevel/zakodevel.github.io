@@ -3,15 +3,3 @@
   margin: 0;
   padding: 0;
 }
-
-@mixin transition-ease {
-  transition: all 0.25s ease-in-out;
-}
-
-@function set-text-color($color) {
-  @if lightness($color) > 40% {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}

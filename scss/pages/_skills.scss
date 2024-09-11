@@ -20,6 +20,10 @@
     letter-spacing: $spacing-unit-p;
   }
 
+  .highlight {
+    color: $secondary-color;
+  }
+
   /* Media Queries */
   @include respond-to("phone") {
     h2,
@@ -33,7 +37,7 @@
     }
 
     p {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
