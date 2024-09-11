@@ -10,10 +10,10 @@
 
   h1,
   h2 {
-    line-height: 110%;
-    letter-spacing: 0.4rem;
+    line-height: $base-line-height;
+    letter-spacing: $spacing-unit-h2;
     margin-bottom: 2rem;
-    font-weight: 700;
+    font-weight: $base-font-weight;
     text-transform: uppercase;
   }
 
@@ -28,10 +28,55 @@
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
+@include respond-to("phone") {
   h1,
   h2 {
-    width: 60%;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 0.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@include respond-to("small-tablet") {
+  h1,
+  h2 {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 0.7rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@include respond-to("tablet") {
+  h1,
+  h2 {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@include respond-to("desktop") {
+  h1,
+  h2 {
+    width: 80%;
   }
 
   h1 {
@@ -43,55 +88,10 @@
   }
 }
 
-@media (min-width: 600px) {
+@include respond-to("large-desktop") {
   h1,
   h2 {
-    width: 60%;
-  }
-
-  h1 {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  h1,
-  h2 {
-    width: 60%;
-  }
-
-  h1 {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  h1,
-  h2 {
-    width: 40%;
-  }
-
-  h1 {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  h1,
-  h2 {
-    width: 20%;
+    width: 30%;
   }
 
   h1 {

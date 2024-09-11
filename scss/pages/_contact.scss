@@ -1,0 +1,112 @@
+.contact {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  overflow: auto;
+  padding: 1rem;
+
+  h2,
+  h3,
+  p {
+    line-height: $base-line-height;
+    margin-bottom: 2rem;
+    font-weight: $base-font-weight;
+  }
+
+  h2 {
+    letter-spacing: $spacing-unit-h2;
+  }
+
+  p {
+    letter-spacing: $spacing-unit-p;
+  }
+
+  /* Media Queries */
+  @include respond-to("phone") {
+    h2,
+    h3,
+    p {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 0.7rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  @include respond-to("small-tablet") {
+    h2,
+    h3,
+    p {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 0.7rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  @include respond-to("tablet") {
+    h2,
+    p {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 0.7rem;
+    }
+
+    p {
+      font-size: 2.5rem;
+    }
+  }
+
+  @include respond-to("desktop") {
+    h2,
+    p {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 3rem;
+    }
+  }
+
+  @include respond-to("large-desktop") {
+    h2,
+    p {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 5rem;
+    }
+  }
+}

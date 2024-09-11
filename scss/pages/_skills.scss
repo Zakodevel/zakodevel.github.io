@@ -1,55 +1,35 @@
-.about {
+.skills {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: left;
-  overflow: hidden;
+  overflow: auto;
   padding: 1rem;
 
   h2,
   p {
-    line-height: 110%;
-    letter-spacing: 0.4rem;
+    line-height: $base-line-height;
+    letter-spacing: $spacing-unit-h2;
     margin-bottom: 2rem;
-    font-weight: 700;
-  }
-
-  h2 {
-    color: $secondary-color;
+    font-weight: $base-font-weight;
   }
 
   p {
-    color: $font-color;
-    letter-spacing: -0.03rem;
+    letter-spacing: $spacing-unit-p;
   }
 
   /* Media Queries */
-
-  @media (max-width: 600px) {
+  @include respond-to("phone") {
     h2,
-    p {
-      width: 70%;
+    p,
+    a {
+      width: 80%;
     }
 
     h2 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
-  @media (min-width: 601px) {
-    h2,
-    p {
-      width: 70%;
-    }
-
-    h2 {
-      font-size: 1rem;
+      font-size: 0.7rem;
     }
 
     p {
@@ -57,10 +37,25 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @include respond-to("small-tablet") {
     h2,
     p {
-      width: 70%;
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 0.7rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  @include respond-to("tablet") {
+    h2,
+    p {
+      width: 80%;
     }
 
     h2 {
@@ -72,10 +67,10 @@
     }
   }
 
-  @media (min-width: 992px) {
+  @include respond-to("desktop") {
     h2,
     p {
-      width: 70%;
+      width: 80%;
     }
 
     h2 {
@@ -87,10 +82,10 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @include respond-to("large-desktop") {
     h2,
     p {
-      width: 70%;
+      width: 80%;
     }
 
     h2 {
