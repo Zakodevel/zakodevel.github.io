@@ -1,0 +1,28 @@
+.menu-btn {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 3vw, 1rem);
+  font-family: $font-family;
+  font-weight: $base-font-weight;
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.275), 0 0 1em $secondary-color;
+  color: $secondary-color;
+  right: 2.5rem;
+  top: 2.5rem;
+  align-items: center;
+  background-color: $primary-color;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -5px -5px 12px 0 rgba(255, 255, 255, 0.039);
+  border-radius: 50px;
+  height: 3rem;
+  width: 6rem;
+  @include transition-ease;
+
+  &:hover {
+    color: $primary-color;
+    background: $secondary-color;
+    text-shadow: none;
+  }
+}

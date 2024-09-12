@@ -1,3 +1,14 @@
 @mixin transition-ease {
   transition: all 0.25s ease-in-out;
 }
+
+@mixin fixed-position($z-index: 1) {
+  position: fixed;
+  z-index: $z-index;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
