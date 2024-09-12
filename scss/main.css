@@ -119,7 +119,8 @@
 }
 
 .about {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,78 +128,23 @@
   text-align: left;
   overflow: hidden;
   padding: 1rem;
-  /* Media Queries */
 }
 .about h2,
 .about p {
   line-height: 110%;
-  letter-spacing: 0.4rem;
   margin-bottom: 2rem;
+  width: 70%;
+  max-width: 1800px;
+}
+.about h2 {
+  font-size: clamp(0.7rem, 2vw, 1rem);
   font-weight: 700;
+  letter-spacing: 0.4rem;
 }
 .about p {
+  font-size: clamp(1.3rem, 4vw, 5rem);
+  font-weight: 700;
   letter-spacing: -0.03rem;
-}
-@media (max-width: 600px) {
-  .about h2,
-  .about p,
-  .about a {
-    width: 80%;
-  }
-  .about h2 {
-    font-size: 0.7rem;
-  }
-  .about p {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 600px) and (max-width: 768px) {
-  .about h2,
-  .about p {
-    width: 80%;
-  }
-  .about h2 {
-    font-size: 0.7rem;
-  }
-  .about p {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 900px) {
-  .about h2,
-  .about p {
-    width: 80%;
-  }
-  .about h2 {
-    font-size: 1rem;
-  }
-  .about p {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 900px) and (max-width: 1200px) {
-  .about h2,
-  .about p {
-    width: 80%;
-  }
-  .about h2 {
-    font-size: 1rem;
-  }
-  .about p {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1200px) {
-  .about h2,
-  .about p {
-    width: 80%;
-  }
-  .about h2 {
-    font-size: 1rem;
-  }
-  .about p {
-    font-size: 5rem;
-  }
 }
 
 .home {
@@ -214,82 +160,28 @@
 .home h1,
 .home h2 {
   line-height: 110%;
-  letter-spacing: 0.4rem;
   margin-bottom: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  width: 70%;
+  max-width: 1800px;
 }
 .home h1 {
-  text-transform: uppercase;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.4rem;
   color: #eb5939;
+}
+.home h2 {
+  font-size: clamp(3rem, 4vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.03rem;
 }
 .home .highlight {
   color: #eb5939;
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-  h1,
-  h2 {
-    width: 80%;
-  }
-  h1 {
-    font-size: 0.5rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 600px) and (max-width: 768px) {
-  h1,
-  h2 {
-    width: 80%;
-  }
-  h1 {
-    font-size: 0.7rem;
-  }
-  h2 {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 900px) {
-  h1,
-  h2 {
-    width: 80%;
-  }
-  h1 {
-    font-size: 1rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 900px) and (max-width: 1200px) {
-  h1,
-  h2 {
-    width: 80%;
-  }
-  h1 {
-    font-size: 1rem;
-  }
-  h2 {
-    font-size: 5rem;
-  }
-}
-@media (min-width: 1200px) {
-  h1,
-  h2 {
-    width: 30%;
-  }
-  h1 {
-    font-size: 1rem;
-  }
-  h2 {
-    font-size: 5rem;
-  }
-}
 .contact {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -297,7 +189,6 @@
   text-align: left;
   overflow: hidden;
   padding: 1rem;
-  /* Media Queries */
 }
 .contact h2,
 .contact h3,
@@ -305,80 +196,20 @@
   line-height: 110%;
   margin-bottom: 2rem;
   font-weight: 700;
+  width: 60%;
+  max-width: 1800px;
 }
 .contact h2 {
+  font-size: clamp(0.7rem, 2vw, 1rem);
   letter-spacing: 0.4rem;
 }
-.contact p {
+.contact h3 {
+  font-size: clamp(0.7rem, 1.5vw, 5rem);
   letter-spacing: -0.03rem;
 }
-@media (max-width: 600px) {
-  .contact h2,
-  .contact h3,
-  .contact p {
-    width: 80%;
-  }
-  .contact h2 {
-    font-size: 0.7rem;
-  }
-  .contact h3 {
-    font-size: 1rem;
-  }
-  .contact p {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 600px) and (max-width: 768px) {
-  .contact h2,
-  .contact h3,
-  .contact p {
-    width: 80%;
-  }
-  .contact h2 {
-    font-size: 0.7rem;
-  }
-  .contact h3 {
-    font-size: 1.5rem;
-  }
-  .contact p {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 900px) {
-  .contact h2,
-  .contact p {
-    width: 80%;
-  }
-  .contact h2 {
-    font-size: 0.7rem;
-  }
-  .contact p {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 900px) and (max-width: 1200px) {
-  .contact h2,
-  .contact p {
-    width: 80%;
-  }
-  .contact h2 {
-    font-size: 1rem;
-  }
-  .contact p {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1200px) {
-  .contact h2,
-  .contact p {
-    width: 80%;
-  }
-  .contact h2 {
-    font-size: 1rem;
-  }
-  .contact p {
-    font-size: 5rem;
-  }
+.contact p {
+  font-size: clamp(1.3rem, 4vw, 5rem);
+  letter-spacing: -0.03rem;
 }
 
 .skills {
@@ -390,81 +221,26 @@
   text-align: left;
   overflow: hidden;
   padding: 1rem;
-  /* Media Queries */
 }
 .skills h2,
 .skills p {
   line-height: 110%;
-  letter-spacing: 0.4rem;
   margin-bottom: 2rem;
+  width: 70%;
+  max-width: 1800px;
+}
+.skills h2 {
+  font-size: clamp(0.7rem, 2vw, 1rem);
   font-weight: 700;
+  letter-spacing: 0.4rem;
 }
 .skills p {
+  font-size: clamp(1.3rem, 4vw, 5rem);
+  font-weight: 700;
   letter-spacing: -0.03rem;
 }
 .skills .highlight {
   color: #eb5939;
-}
-@media (max-width: 600px) {
-  .skills h2,
-  .skills p,
-  .skills a {
-    width: 80%;
-  }
-  .skills h2 {
-    font-size: 0.7rem;
-  }
-  .skills p {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 600px) and (max-width: 768px) {
-  .skills h2,
-  .skills p {
-    width: 80%;
-  }
-  .skills h2 {
-    font-size: 0.7rem;
-  }
-  .skills p {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 900px) {
-  .skills h2,
-  .skills p {
-    width: 80%;
-  }
-  .skills h2 {
-    font-size: 1rem;
-  }
-  .skills p {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 900px) and (max-width: 1200px) {
-  .skills h2,
-  .skills p {
-    width: 80%;
-  }
-  .skills h2 {
-    font-size: 1rem;
-  }
-  .skills p {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 1200px) {
-  .skills h2,
-  .skills p {
-    width: 80%;
-  }
-  .skills h2 {
-    font-size: 1rem;
-  }
-  .skills p {
-    font-size: 5rem;
-  }
 }
 
 body {

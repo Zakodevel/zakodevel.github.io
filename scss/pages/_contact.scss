@@ -1,5 +1,6 @@
 .contact {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,101 +13,28 @@
   h3,
   p {
     line-height: $base-line-height;
-    margin-bottom: 2rem;
+    margin-bottom: $margin-bottom;
     font-weight: $base-font-weight;
+    width: 60%;
+    max-width: 1800px;
   }
 
   h2 {
-    letter-spacing: $spacing-unit-h2;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    letter-spacing: $spacing-unit-large;
+  }
+
+  h3 {
+    font-size: clamp(0.7rem, 1.5vw, 5rem);
+    letter-spacing: $spacing-unit-small;
   }
 
   p {
-    letter-spacing: $spacing-unit-p;
+    font-size: clamp(1.3rem, 4vw, 5rem);
+    letter-spacing: $spacing-unit-small;
   }
 
-  /* Media Queries */
-  @include respond-to("phone") {
-    h2,
-    h3,
-    p {
-      width: 80%;
-    }
-
-    h2 {
-      font-size: 0.7rem;
-    }
-
-    h3 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
-  @include respond-to("small-tablet") {
-    h2,
-    h3,
-    p {
-      width: 80%;
-    }
-
-    h2 {
-      font-size: 0.7rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-    }
-
-    p {
-      font-size: 2rem;
-    }
-  }
-
-  @include respond-to("tablet") {
-    h2,
-    p {
-      width: 80%;
-    }
-
-    h2 {
-      font-size: 0.7rem;
-    }
-
-    p {
-      font-size: 2.5rem;
-    }
-  }
-
-  @include respond-to("desktop") {
-    h2,
-    p {
-      width: 80%;
-    }
-
-    h2 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 3rem;
-    }
-  }
-
-  @include respond-to("large-desktop") {
-    h2,
-    p {
-      width: 80%;
-    }
-
-    h2 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 5rem;
-    }
-  }
+  // a {
+  //   font-size: clamp(0.7rem, 1.5vw, 5rem);
+  // }
 }
