@@ -15,18 +15,20 @@
   font-family: "avant garde", sans-serif;
   font-weight: 700;
   text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.275), 0 0 1em #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%;
-  color: #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%;
   right: 2.5rem;
   top: 2.5rem;
   align-items: center;
   height: 4rem;
   width: 4rem;
   transition: all 0.25s ease-in-out;
-  box-shadow: 12px 12px 16px 0 rgba(11, 11, 11, 0.25), -6px -6px 12px 0 rgba(255, 255, 255, 0.012);
+  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%);
+  background-clip: text;
+  color: transparent;
+  box-shadow: 12px 12px 16px 0 rgba(11, 11, 11, 0.25), -6px -6px 12px 0 rgba(255, 255, 255, 0.045);
   border-radius: 50px;
 }
 .menu-btn:focus, .menu-btn:hover {
-  box-shadow: inset 12px 12px 16px 0 rgba(11, 11, 11, 0.323), inset -6px -6px 12px 0 rgba(255, 255, 255, 0.012);
+  box-shadow: inset 12px 12px 16px 0 rgba(11, 11, 11, 0.323), inset -6px -6px 12px 0 rgba(255, 255, 255, 0.045);
 }
 
 .nav {
@@ -40,11 +42,11 @@
   visibility: visible;
 }
 .nav .menu-nav {
+  height: 100vh;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   overflow: hidden;
   background: #121212;
   list-style-type: none;
@@ -76,7 +78,10 @@
   transition: all 0.25s ease-in-out;
 }
 .nav .menu-nav__link:hover {
-  color: #121212;
+  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.25s ease-in-out;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -144,43 +149,17 @@
   position: relative;
   background-color: #121212;
 }
-.home .hero-border::after, .home .hero-border::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: conic-gradient(from var(--angle), transparent 70%, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%);
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  padding: 1px;
-  border-radius: 10px;
-  animation: 10s spin linear infinite;
-}
-.home .hero-border::before {
-  filter: blur(10rem);
-  opacity: 0.2;
-}
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
-  to {
-    --angle: 360deg;
-  }
-}
 .home h1,
 .home h2 {
   line-height: 110%;
   margin-bottom: 2rem;
   max-width: 1800px;
+  text-transform: uppercase;
 }
 .home h1 {
   font-size: clamp(0.7rem, 2vw, 1rem);
   font-weight: 700;
   letter-spacing: 0.4rem;
-  text-transform: uppercase;
   background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%);
   background-clip: text;
   color: transparent;
@@ -194,13 +173,21 @@
   background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%);
   background-clip: text;
   color: transparent;
+  text-shadow: 0 0 0.125em rgb(120, 64, 210);
+  position: relative;
+}
+.home .highlight::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(70px) rotateX(45deg) scale(1, 0.35);
+  filter: blur(4rem);
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
 .contact {
   height: 100vh;
   width: 100vw;
@@ -230,7 +217,7 @@
 }
 .contact h3 {
   font-size: clamp(0.7rem, 1.5vw, 5rem);
-  letter-spacing: -0.03rem;
+  letter-spacing: 0.4rem;
   background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%);
   background-clip: text;
   color: transparent;
@@ -239,9 +226,9 @@
   font-size: clamp(1.3rem, 4vw, 5rem);
   letter-spacing: -0.03rem;
 }
-.contact a {
-  font-size: clamp(0.7rem, 1.5vw, 5rem);
-  align-items: left;
+.contact .mail-to {
+  font-size: clamp(0.5rem, 4vw, 2rem);
+  letter-spacing: 0.4rem;
 }
 
 .skills {
@@ -309,18 +296,16 @@ main .social-icons {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.5rem;
-  bottom: 2.5rem;
-  left: 2.5rem;
+  gap: 1.5em;
+  bottom: 1.5em;
+  left: 1.5em;
 }
 main .social-icons a {
   padding: 0.8em;
-  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -5px -5px 12px 0 rgba(255, 255, 255, 0.012);
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -5px -5px 12px 0 rgba(255, 255, 255, 0.045);
   border-radius: 50px;
   transition: all 0.25s ease-in-out;
 }
-main .social-icons a:hover {
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%);
-  background-clip: text;
-  color: transparent;
+main .social-icons a:focus, main .social-icons a:hover {
+  box-shadow: inset 12px 12px 16px 0 rgba(11, 11, 11, 0.323), inset -6px -6px 12px 0 rgba(255, 255, 255, 0.045);
 }/*# sourceMappingURL=main.css.map */

@@ -15,43 +15,43 @@
     position: relative;
     background-color: $primary-color;
 
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-image: conic-gradient(
-        from var(--angle),
-        transparent 70%,
-        #ff073a 0%,
-        #ff1493 20%,
-        #ff33cc 40%,
-        #007bff 70%,
-        #6f00ff 100%
-      );
-      top: 50%;
-      left: 50%;
-      translate: -50% -50%;
-      z-index: -1;
-      padding: 1px;
-      border-radius: 10px;
-      animation: 10s spin linear infinite;
-    }
+    // &::after,
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   height: 100%;
+    //   width: 100%;
+    //   background-image: conic-gradient(
+    //     from var(--angle),
+    //     transparent 70%,
+    //     #ff073a 0%,
+    //     #ff1493 20%,
+    //     #ff33cc 40%,
+    //     #007bff 70%,
+    //     #6f00ff 100%
+    //   );
+    //   top: 50%;
+    //   left: 50%;
+    //   translate: -50% -50%;
+    //   z-index: -1;
+    //   padding: 1px;
+    //   border-radius: 10px;
+    //   animation: 10s spin linear infinite;
+    // }
 
-    &::before {
-      filter: blur(10rem);
-      opacity: 0.2;
-    }
+    // &::before {
+    //   filter: blur(10rem);
+    //   opacity: 0.2;
+    // }
 
-    @keyframes spin {
-      from {
-        --angle: 0deg;
-      }
-      to {
-        --angle: 360deg;
-      }
-    }
+    // @keyframes spin {
+    //   from {
+    //     --angle: 0deg;
+    //   }
+    //   to {
+    //     --angle: 360deg;
+    //   }
+    // }
   }
 
   h1,
@@ -60,13 +60,14 @@
     margin-bottom: $margin-bottom;
     // width: 70%;
     max-width: 1800px;
+    text-transform: uppercase;
   }
 
   h1 {
     font-size: clamp(0.7rem, 2vw, 1rem);
     font-weight: $base-font-weight;
     letter-spacing: $spacing-unit-large;
-    text-transform: uppercase;
+
     @include title-test;
   }
 
@@ -78,12 +79,33 @@
 
   .highlight {
     @include title-test;
+    text-shadow: 0 0 0.125em rgb(120, 64, 210);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(
+        45deg,
+        #ff073a 0%,
+        #ff1493 20%,
+        #ff33cc 40%,
+        #007bff 70%,
+        #6f00ff 100%
+      );
+      top: 120%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      transform: perspective(70px) rotateX(45deg) scale(1, 0.35);
+      filter: blur(4rem);
+    }
   }
 }
 
-// Custom property for the angle of the conic gradient
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
+// @property --angle {
+//   syntax: "<angle>";
+//   initial-value: 0deg;
+//   inherits: false;
+// }

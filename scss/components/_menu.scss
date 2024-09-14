@@ -10,11 +10,11 @@
   }
 
   .menu-nav {
+    height: 100vh;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     overflow: hidden;
     background: $primary-color;
     list-style-type: none;
@@ -48,7 +48,8 @@
       @include transition-ease;
 
       &:hover {
-        color: $primary-color;
+        @include title-test;
+        @include transition-ease;
       }
     }
   }
