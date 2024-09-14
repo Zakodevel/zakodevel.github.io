@@ -1,10 +1,10 @@
-$primary-color: #121212;
+$primary-color: #000000;
 $secondary-color: (
   #ff073a 0%,
-  /* Neon Red */ #ff1493 20%,
-  /* Bright Neon Pink */ #ff33cc 40%,
-  /* Intermediate Pink */ #007bff 70%,
-  /* Electric Blue */ #6f00ff 100% /* Deep Purple */
+  #ff1493 20%,
+  #ff33cc 40%,
+  #007bff 70%,
+  #6f00ff 100%
 );
 
 $header-padding: 1rem;

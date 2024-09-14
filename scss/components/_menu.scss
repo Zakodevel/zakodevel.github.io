@@ -34,7 +34,7 @@
       }
 
       &.active > a {
-        @include title-test;
+        @include color-rainbow;
       }
     }
 
@@ -48,7 +48,7 @@
       @include transition-ease;
 
       &:hover {
-        @include title-test;
+        @include color-rainbow;
         @include transition-ease;
       }
     }

@@ -22,13 +22,13 @@
   h2 {
     font-size: clamp(0.7rem, 2vw, 1rem);
     letter-spacing: $spacing-unit-large;
-    @include title-test;
+    @include color-rainbow;
   }
 
   h3 {
     font-size: clamp(0.7rem, 1.5vw, 5rem);
     letter-spacing: $spacing-unit-large;
-    @include title-test;
+    @include color-rainbow;
   }
 
   p {
@@ -38,6 +38,6 @@
 
   .mail-to {
     font-size: clamp(0.5rem, 4vw, 2rem);
-    letter-spacing: $spacing-unit-large;
+    letter-spacing: $spacing-unit-small;
   }
 }

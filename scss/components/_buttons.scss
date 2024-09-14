@@ -15,15 +15,15 @@
   height: 4rem;
   width: 4rem;
   @include transition-ease;
-  @include title-test;
+  @include color-rainbow;
 
   box-shadow: 12px 12px 16px 0 rgba(11, 11, 11, 0.25),
-    -6px -6px 12px 0 rgba(255, 255, 255, 0.045);
+    -6px -6px 12px 0 rgba(255, 255, 255, 0.144);
   border-radius: 50px;
 
   &:focus,
   &:hover {
     box-shadow: inset 12px 12px 16px 0 rgba(11, 11, 11, 0.323),
-      inset -6px -6px 12px 0 rgba(255, 255, 255, 0.045);
+      inset -6px -6px 12px 0 rgba(255, 255, 255, 0.144);
   }
 }
