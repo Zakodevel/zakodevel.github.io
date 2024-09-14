@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   width: 100vw;
-  opacity: 0.99;
   visibility: hidden;
 
   &.open {
@@ -35,20 +34,21 @@
       }
 
       &.active > a {
-        color: $secondary-color;
+        @include title-test;
       }
     }
 
     &__link {
       display: inline-block;
-      font-size: 2rem;
+      font-size: 2em;
       text-transform: uppercase;
-      padding: 2rem 0;
+      padding: 2.5rem;
       font-weight: $base-font-weight;
+      border-radius: 50px;
       @include transition-ease;
 
       &:hover {
-        color: $secondary-color;
+        color: $primary-color;
       }
     }
   }

@@ -24,10 +24,6 @@ a {
   text-decoration: none;
 }
 
-.text-secondary {
-  color: $secondary-color;
-}
-
 header {
   @include fixed-position($fixed-position-z-index);
   width: 100%;
@@ -40,13 +36,20 @@ main {
 
   .social-icons {
     @include fixed-position;
-    bottom: 1rem;
-    left: 1rem;
     @include flex-column-center;
+    bottom: 2.5rem;
+    left: 2.5rem;
 
     a {
       padding: $social-icon-padding;
+      box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -5px -5px 12px 0 rgba(255, 255, 255, 0.012);
+      border-radius: 50px;
       @include transition-ease;
+
+      &:hover {
+        @include title-test;
+      }
     }
   }
 }

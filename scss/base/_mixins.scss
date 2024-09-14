@@ -9,6 +9,32 @@
 
 @mixin flex-column-center {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 1.5rem;
+}
+
+// @mixin title-test {
+//   background: linear-gradient(
+//     to right,
+//     #ff073a 0%,
+//     /* Neon Red */ #ff1493 25%,
+//     /* Bright Neon Pink */ #007bff 50%,
+//     /* Electric Blue */ #6f00ff 100%
+//   );
+//   background-clip: text;
+//   color: transparent;
+// }
+
+@mixin title-test {
+  background: linear-gradient(
+    to right,
+    #ff073a 0%,
+    /* Neon Red */ #ff1493 20%,
+    /* Bright Neon Pink */ #ff33cc 40%,
+    /* Intermediate Pink */ #007bff 70%,
+    /* Electric Blue */ #6f00ff 100% /* Neon Indigo */
+  );
+  background-clip: text;
+  color: transparent;
 }

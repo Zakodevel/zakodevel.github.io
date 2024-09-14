@@ -21,6 +21,7 @@
     font-size: clamp(0.7rem, 2vw, 1rem);
     font-weight: $base-font-weight;
     letter-spacing: $spacing-unit-large;
+    @include title-test;
   }
 
   p {

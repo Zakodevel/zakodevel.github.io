@@ -4,15 +4,61 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   overflow: hidden;
   padding: 1rem;
+
+  .hero-border {
+    padding: 4rem;
+    border-radius: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    background-color: $primary-color;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image: conic-gradient(
+        from var(--angle),
+        transparent 70%,
+        #ff073a 0%,
+        #ff1493 20%,
+        #ff33cc 40%,
+        #007bff 70%,
+        #6f00ff 100%
+      );
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+      padding: 1px;
+      border-radius: 10px;
+      animation: 10s spin linear infinite;
+    }
+
+    &::before {
+      filter: blur(10rem);
+      opacity: 0.2;
+    }
+
+    @keyframes spin {
+      from {
+        --angle: 0deg;
+      }
+      to {
+        --angle: 360deg;
+      }
+    }
+  }
 
   h1,
   h2 {
     line-height: $base-line-height;
     margin-bottom: $margin-bottom;
-    width: 70%;
+    // width: 70%;
     max-width: 1800px;
   }
 
@@ -20,16 +66,24 @@
     font-size: clamp(0.7rem, 2vw, 1rem);
     font-weight: $base-font-weight;
     letter-spacing: $spacing-unit-large;
-    color: $secondary-color;
+    text-transform: uppercase;
+    @include title-test;
   }
 
   h2 {
-    font-size: clamp(3rem, 4vw, 5rem);
+    font-size: clamp(3rem, 4vw, 8rem);
     font-weight: $base-font-weight;
     letter-spacing: $spacing-unit-small;
   }
 
   .highlight {
-    color: $secondary-color;
+    @include title-test;
   }
+}
+
+// Custom property for the angle of the conic gradient
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }

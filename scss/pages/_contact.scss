@@ -22,11 +22,13 @@
   h2 {
     font-size: clamp(0.7rem, 2vw, 1rem);
     letter-spacing: $spacing-unit-large;
+    @include title-test;
   }
 
   h3 {
     font-size: clamp(0.7rem, 1.5vw, 5rem);
     letter-spacing: $spacing-unit-small;
+    @include title-test;
   }
 
   p {
@@ -34,7 +36,8 @@
     letter-spacing: $spacing-unit-small;
   }
 
-  // a {
-  //   font-size: clamp(0.7rem, 1.5vw, 5rem);
-  // }
+  a {
+    font-size: clamp(0.7rem, 1.5vw, 5rem);
+    align-items: left;
+  }
 }
