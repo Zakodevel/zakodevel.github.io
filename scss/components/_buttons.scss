@@ -1,29 +1,35 @@
 .menu-btn {
   display: flex;
-  position: absolute;
+  align-items: center;
   justify-content: center;
-  z-index: 1;
+  position: absolute;
+
   cursor: pointer;
-  text-transform: uppercase;
+
   font-size: clamp(0.7rem, 3vw, 1rem);
   font-family: $font-family;
   font-weight: $base-font-weight;
-  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.275), 0 0 1em $secondary-color;
+  border: none;
+  border-radius: 1000px;
+  background-color: $primary-color;
   right: 2.5rem;
   top: 2.5rem;
-  align-items: center;
-  height: 4rem;
-  width: 4rem;
-  @include transition-ease;
-  @include color-rainbow;
 
-  box-shadow: 12px 12px 16px 0 rgba(11, 11, 11, 0.25),
-    -6px -6px 12px 0 rgba(255, 255, 255, 0.144);
-  border-radius: 50px;
+  height: 3rem;
+  width: 5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 115%;
+    width: 110%;
+    border-radius: 1000px;
+    z-index: -1;
+    @include color-rainbow-btn;
+  }
 
   &:focus,
   &:hover {
-    box-shadow: inset 12px 12px 16px 0 rgba(11, 11, 11, 0.323),
-      inset -6px -6px 12px 0 rgba(255, 255, 255, 0.144);
+    z-index: -1;
   }
 }

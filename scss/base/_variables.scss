@@ -1,11 +1,5 @@
 $primary-color: #000000;
-$secondary-color: (
-  #ff073a 0%,
-  #ff1493 20%,
-  #ff33cc 40%,
-  #007bff 70%,
-  #6f00ff 100%
-);
+$secondary-color: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
 
 $header-padding: 1rem;
 $social-icon-padding: 0.8em;

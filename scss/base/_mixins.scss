@@ -15,18 +15,11 @@
 }
 
 @mixin color-rainbow {
-  background: linear-gradient(
-    to right,
-    #ff073a 0%,
-    #ff1493 20%,
-    #ff33cc 40%,
-    #007bff 80%,
-    #6f00ff 100%
-  );
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 
   @keyframes gradient {
     0% {
@@ -41,17 +34,38 @@
   }
 }
 
-// @mixin color-rainbow {
-//   background: linear-gradient(
-//     to right,
-//     #ff073a 0%,
-//     #ff1493 20%,
-//     #ff33cc 40%,
-//     #007bff 80%,
-//     #6f00ff 100%
-//   );
-//   background-size: 400% 400%;
-//   animation: gradient 15s ease infinite;
-//   height: 100vh;
+@mixin color-rainbow-btn {
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
+  color: transparent;
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 
-// }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+@mixin blinking-dot {
+  font-size: clamp(3rem, 4vw, 8rem);
+  animation: blink 1s infinite;
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

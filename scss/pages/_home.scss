@@ -8,50 +8,8 @@
   padding: 1rem;
 
   .hero-border {
-    padding: 4rem;
-    border-radius: 10px;
     text-align: center;
-    border-radius: 10px;
-    position: relative;
     background-color: $primary-color;
-
-    // &::after,
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   height: 100%;
-    //   width: 100%;
-    //   background-image: conic-gradient(
-    //     from var(--angle),
-    //     transparent 70%,
-    //     #ff073a 0%,
-    //     #ff1493 20%,
-    //     #ff33cc 40%,
-    //     #007bff 70%,
-    //     #6f00ff 100%
-    //   );
-    //   top: 50%;
-    //   left: 50%;
-    //   translate: -50% -50%;
-    //   z-index: -1;
-    //   padding: 1px;
-    //   border-radius: 10px;
-    //   animation: 10s spin linear infinite;
-    // }
-
-    // &::before {
-    //   filter: blur(10rem);
-    //   opacity: 0.2;
-    // }
-
-    // @keyframes spin {
-    //   from {
-    //     --angle: 0deg;
-    //   }
-    //   to {
-    //     --angle: 360deg;
-    //   }
-    // }
   }
 
   h1,
@@ -79,7 +37,10 @@
 
   .highlight {
     @include color-rainbow;
-    position: relative;
+  }
+
+  .blinking-dot {
+    @include blinking-dot;
   }
 }
 

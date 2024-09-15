@@ -6,28 +6,32 @@
 
 .menu-btn {
   display: flex;
-  position: absolute;
+  align-items: center;
   justify-content: center;
-  z-index: 1;
+  position: absolute;
   cursor: pointer;
-  text-transform: uppercase;
   font-size: clamp(0.7rem, 3vw, 1rem);
   font-family: "avant garde", sans-serif;
   font-weight: 700;
-  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.275), 0 0 1em #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 70%, #6f00ff 100%;
+  border: none;
+  border-radius: 1000px;
+  background-color: #000000;
   right: 2.5rem;
   top: 2.5rem;
-  align-items: center;
-  height: 4rem;
-  width: 4rem;
-  transition: all 0.25s ease-in-out;
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
-  background-clip: text;
+  height: 3rem;
+  width: 5rem;
+}
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  height: 115%;
+  width: 110%;
+  border-radius: 1000px;
+  z-index: -1;
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
-  box-shadow: 12px 12px 16px 0 rgba(11, 11, 11, 0.25), -6px -6px 12px 0 rgba(255, 255, 255, 0.144);
-  border-radius: 50px;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -41,7 +45,7 @@
   }
 }
 .menu-btn:focus, .menu-btn:hover {
-  box-shadow: inset 12px 12px 16px 0 rgba(11, 11, 11, 0.323), inset -6px -6px 12px 0 rgba(255, 255, 255, 0.144);
+  z-index: -1;
 }
 
 .nav {
@@ -77,11 +81,11 @@
   transform: translateX(0);
 }
 .nav .menu-nav__item.active > a {
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -104,11 +108,11 @@
   transition: all 0.25s ease-in-out;
 }
 .nav .menu-nav__link:hover {
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
   transition: all 0.25s ease-in-out;
 }
 @keyframes gradient {
@@ -161,11 +165,11 @@
   font-size: clamp(0.7rem, 2vw, 1rem);
   font-weight: 700;
   letter-spacing: 0.4rem;
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -194,11 +198,7 @@
   padding: 1rem;
 }
 .home .hero-border {
-  padding: 4rem;
-  border-radius: 10px;
   text-align: center;
-  border-radius: 10px;
-  position: relative;
   background-color: #000000;
 }
 .home h1,
@@ -213,11 +213,11 @@
   font-weight: 700;
   letter-spacing: 0.4rem;
   position: relative;
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -236,12 +236,11 @@
   letter-spacing: -0.03rem;
 }
 .home .highlight {
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
-  position: relative;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -254,6 +253,21 @@
     background-position: 0% 50%;
   }
 }
+.home .blinking-dot {
+  font-size: clamp(3rem, 4vw, 8rem);
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .contact {
   height: 100vh;
@@ -262,7 +276,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
   overflow: hidden;
   padding: 1rem;
 }
@@ -278,11 +291,11 @@
 .contact h2 {
   font-size: clamp(0.7rem, 2vw, 1rem);
   letter-spacing: 0.4rem;
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -298,11 +311,11 @@
 .contact h3 {
   font-size: clamp(0.7rem, 1.5vw, 5rem);
   letter-spacing: 0.4rem;
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -317,10 +330,6 @@
 }
 .contact p {
   font-size: clamp(1.3rem, 4vw, 5rem);
-  letter-spacing: -0.03rem;
-}
-.contact .mail-to {
-  font-size: clamp(0.5rem, 4vw, 2rem);
   letter-spacing: -0.03rem;
 }
 
@@ -345,11 +354,11 @@
   font-size: clamp(0.7rem, 2vw, 1rem);
   font-weight: 700;
   letter-spacing: 0.4rem;
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -368,11 +377,11 @@
   letter-spacing: -0.03rem;
 }
 .skills .highlight {
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -426,11 +435,11 @@ main .social-icons a {
   transition: all 0.25s ease-in-out;
 }
 main .social-icons a:focus, main .social-icons a:hover {
-  background: linear-gradient(to right, #ff073a 0%, #ff1493 20%, #ff33cc 40%, #007bff 80%, #6f00ff 100%);
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
   background-clip: text;
   color: transparent;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {

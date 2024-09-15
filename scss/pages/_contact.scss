@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
   overflow: hidden;
   padding: 1rem;
 
@@ -33,11 +32,6 @@
 
   p {
     font-size: clamp(1.3rem, 4vw, 5rem);
-    letter-spacing: $spacing-unit-small;
-  }
-
-  .mail-to {
-    font-size: clamp(0.5rem, 4vw, 2rem);
     letter-spacing: $spacing-unit-small;
   }
 }
