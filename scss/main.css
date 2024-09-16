@@ -20,6 +20,7 @@
   top: 2.5rem;
   height: 3rem;
   width: 5rem;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.772);
 }
 .menu-btn::after {
   content: "";
@@ -45,6 +46,75 @@
   }
 }
 .menu-btn:focus, .menu-btn:hover {
+  z-index: -1;
+}
+
+.form-container {
+  display: flex;
+  background-color: #000000;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  z-index: -1;
+  max-width: 100%;
+  width: 60%;
+}
+.form-container label {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "avant garde", sans-serif;
+  line-height: 110%;
+  letter-spacing: 0.4rem;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+}
+.form-container input[type=name],
+.form-container input[type=email],
+.form-container textarea {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 1000px;
+  background: none;
+  color: white;
+}
+.form-container button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #000000;
+  font-family: "avant garde", sans-serif;
+  font-weight: 700;
+  border-radius: 1000px;
+  cursor: pointer;
+  height: 3rem;
+  width: 5rem;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.772);
+}
+.form-container button::after {
+  content: "";
+  position: absolute;
+  height: 115%;
+  width: 110%;
+  border-radius: 1000px;
+  z-index: -1;
+  background: linear-gradient(to bottom right, #ff073a 0%, #007bff 100%);
+  color: transparent;
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.form-container button:focus, .form-container button:hover {
   z-index: -1;
 }
 

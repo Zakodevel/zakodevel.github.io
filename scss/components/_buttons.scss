@@ -18,6 +18,8 @@
   height: 3rem;
   width: 5rem;
 
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.772);
+
   &::after {
     content: "";
     position: absolute;
