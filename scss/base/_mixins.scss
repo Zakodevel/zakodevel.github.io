@@ -55,7 +55,7 @@
 
 @mixin blinking-dot {
   font-size: clamp(3rem, 4vw, 8rem);
-  animation: blink 1s infinite;
+  animation: blink 2s infinite;
 
   @keyframes blink {
     0% {
